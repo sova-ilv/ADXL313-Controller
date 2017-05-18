@@ -17,12 +17,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void readInfoRegisters();
+
 private:
     Ui::MainWindow *ui;
     QVector<ChartWindow*> mTasks;
 
 private slots:
     void enable_command();
+    void removeChart(ChartWindow* task);
 
 };
 

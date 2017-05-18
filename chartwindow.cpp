@@ -10,13 +10,25 @@
 #include <QStatusBar>
 #include <QFont>
 
+#include "mainwindow.h"
+
+
 ChartWindow::ChartWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ChartWindow)
 {
     ui->setupUi(this);
     //createStatusBar();
+
     setupRealtimeDataDemo(ui->customPlot);
+
+    connect(ui->removeButton, &QPushButton::clicked, [this] {
+        qDebug() << "Trying to remove";
+        this->emit removed(this);
+    });
+
+
+
 
 }
 

@@ -20,7 +20,7 @@
       <x>10</x>
       <y>10</y>
       <width>1151</width>
-      <height>691</height>
+      <height>711</height>
      </rect>
     </property>
     <property name="font">
@@ -54,22 +54,46 @@
        <rect>
         <x>70</x>
         <y>20</y>
-        <width>81</width>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
+      </property>
       <property name="text">
-       <string>Enable</string>
+       <string>Enable Capture</string>
       </property>
      </widget>
      <widget class="QPushButton" name="stopButton">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>260</x>
         <y>20</y>
         <width>81</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
       </property>
       <property name="text">
        <string>Stop</string>
@@ -78,11 +102,20 @@
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>350</x>
         <y>20</y>
         <width>81</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
       </property>
       <property name="text">
        <string>Start</string>
@@ -94,7 +127,7 @@
         <x>10</x>
         <y>90</y>
         <width>1101</width>
-        <height>541</height>
+        <height>571</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="mainchartLayout"/>
@@ -130,6 +163,15 @@ p, li { white-space: pre-wrap; }
         <width>161</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
       </property>
       <property name="text">
        <string>Read Info Registers</string>
@@ -265,6 +307,15 @@ p, li { white-space: pre-wrap; }
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
+      </property>
       <property name="text">
        <string>Read</string>
       </property>
@@ -285,6 +336,15 @@ p, li { white-space: pre-wrap; }
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ border: 2px solid gray;
+ border-radius: 10px;
+ padding: 0 8px;
+ background: white;
+}</string>
       </property>
       <property name="text">
        <string>Write</string>

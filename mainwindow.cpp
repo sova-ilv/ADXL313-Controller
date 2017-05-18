@@ -5,6 +5,7 @@
 #include <QInputDialog>
 
 #include "qdebug.h"
+#include "adxl313.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,11 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //ChartWindow receiver;
 
-    //connect(ui->enableButton,  &QPushButton::clicked,
-      //      this, &MainWindow::enable_command);
-
     connect(ui->enableButton,  &QPushButton::clicked,
             this, &MainWindow::enable_command);
+
 
 }
 
@@ -26,6 +25,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 void MainWindow::enable_command()
 {
@@ -43,4 +43,18 @@ void MainWindow::enable_command()
 
     connect(ui->startButton,  &QPushButton::clicked,
             task, &ChartWindow::startAcquisition);
+
+    connect(task, &ChartWindow::removed, this, &MainWindow::removeChart);
+    //connect(ui->removeButton, &QPushButton::clicked,
+          //  task, &MainWindow::removeChart);
 }
+
+void MainWindow::removeChart(ChartWindow *task)
+{
+   qDebug() << "removing a Chart";
+   mTasks.removeOne(task);
+   ui->mainchartLayout->removeWidget(task);
+   task->setParent(0);
+   delete task;
+}
+

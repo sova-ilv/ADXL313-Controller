@@ -28,6 +28,9 @@ public:
 private slots:
   void realtimeDataSlot();
 
+signals:
+  void removed(ChartWindow* chart);
+
 private:
     Ui::ChartWindow *ui;
     QString demoName;
