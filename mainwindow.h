@@ -17,7 +17,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void readInfoRegisters();
+    void readInfoReg();
+    void readReg();
+    void writeReg();
 
 private:
     Ui::MainWindow *ui;

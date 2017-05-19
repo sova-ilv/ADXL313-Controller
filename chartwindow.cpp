@@ -26,10 +26,6 @@ ChartWindow::ChartWindow(QWidget *parent) :
         qDebug() << "Trying to remove";
         this->emit removed(this);
     });
-
-
-
-
 }
 
 ChartWindow::~ChartWindow()

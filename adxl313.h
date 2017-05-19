@@ -8,8 +8,8 @@ public:
     ADXL313();
 
     void readInfoRegisters(int *infoArray);
-
-    ADXL313 myAccel;
+    int readByteAddr(int addr);
+    int writeByteAddr(int addr, int dat);
 };
 
 #endif // ADXL313_H
