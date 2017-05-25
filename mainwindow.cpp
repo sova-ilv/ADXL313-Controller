@@ -8,6 +8,7 @@
 
 #include "qdebug.h"
 #include "adxl313.h"
+#include "usbserialapp.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -27,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->writeRegButton, &QPushButton::clicked,
             this, &MainWindow::writeReg);
 
+    usbSerialApp myserial;
+    myserial.initSerialUsb();
 }
 
 MainWindow::~MainWindow()
